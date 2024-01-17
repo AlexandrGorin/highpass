@@ -1,0 +1,135 @@
+.about {
+    padding-top: 29px;
+    padding-bottom: 67px;
+    background-color: $color-black;
+    &__title {
+        @include title-text;
+        color: $primary-color;
+        margin-bottom: 3px;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(278px, 1fr));
+        gap: 30px;
+    }
+    &__descr-text {
+        @include text-content;
+        line-height: 28px;
+        color: $light-grey-color;
+    }
+    &__mailing img {
+        width: 100%;
+    }
+    &__mailing-title {
+        margin-top: 19px;
+        margin-bottom: 16px;
+        color: $primary-color;
+        @include subtitle-text;
+    }
+    &__mailing-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    &__mailing-input {
+        cursor: pointer;
+        outline: none;
+        width: 474px;
+        padding: 15px 23px;
+        background-color: $color-input;
+    }
+    &__mailing-input:focus {
+        border: 1px solid #FF6E30;
+    }
+    &__mailing-input::placeholder {
+        @include text-content;
+        color: $light-grey-color;
+    }
+    &__mailing-input:hover::placeholder {
+        transition: color 0.5s ease;
+        color: $hover-color;
+    }
+    &__mailing-btn {
+        @include font-btn;
+    }
+    &__mailing-btn:hover {
+        transition: background-color 1s ease;
+        background-color: $focus-color;
+    }
+    &__mailing-btn:focus {
+        margin: -2.5px;
+        border: 3px solid $active-color;
+        outline: none;
+    }
+    &__mailing-btn:active {
+        margin: -2.5px;
+        background-color: $active-color;
+    }
+}
+
+@media (max-width:1024px) {
+    .about {
+        padding-bottom: 79px;
+        &__content {
+            gap: 28px;
+        }
+        &__title {
+            margin-bottom: 0;
+        }
+        &__descr-text {
+            max-width: 466px;
+            margin-top: 2px;
+        }
+        &__mailing-form {
+            gap: 19px;
+        }
+        &__mailing-title {
+            margin-top: 20px;
+            margin-bottom: 17px;
+        }
+        &__mailing-input {
+            width: 342px;
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .about {
+        padding-bottom: 62px;
+    }
+}
+
+@media (max-width:520px) {
+    .about {
+        &__content {
+            gap: 23px;
+        }
+        padding-top: 30px;
+        padding-bottom: 61px;
+        &__title {
+            font-size: 18px;
+        }
+        &__descr-text {
+            margin-top: 3px;
+            font-size: 14px;
+            line-height: 25px;
+        }
+        &__mailing-title {
+            font-size: 18px;
+            margin-top: 23px;
+            margin-bottom: 15px;
+        }
+        &__mailing-input {
+            height: 40px;
+        }
+        &__mailing-input::placeholder {
+            font-size: 14px;
+        }
+        &__mailing-btn {
+            padding: 11px 22px;
+            font-size: 14px;
+        }
+    }
+}

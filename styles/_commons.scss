@@ -1,0 +1,127 @@
+$font-primary:roboto;
+$font-secondary:ttfirsneue;
+$primary-color:#FFFFFF;
+$color-black:#202020;
+$color-btn:#A47F62;
+$span-color:#999999;
+$color-input:#4A4A4A;
+$light-grey-color:#CACACA;
+$placeholder-color:#E9E9E9;
+$hover-color: #A47F62;
+$active-color:#CE4307;
+$focus-color:#BC572B;
+@mixin font-btn {
+    padding: 15px 22px;
+    font-family: $font-primary;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 16px;
+    color: $primary-color;
+    background-color: $color-btn;
+}
+
+@mixin header-text {
+    font-family: $font-secondary;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 16px;
+    color: $primary-color;
+}
+
+@mixin text-content {
+    font-family: $font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+@mixin title-text {
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@mixin subtitle-text {
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+@mixin hashtag-text {
+    display: block;
+    color: $primary-color;
+    background-color: $color-black;
+    padding: 6px 14px;
+    text-align: center;
+    font-family: $font-primary;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    font-family: $font-secondary, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $primary-color;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    background-color: $primary-color;
+    font-family: $font-primary, sans-serif;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+._container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 30px;
+}

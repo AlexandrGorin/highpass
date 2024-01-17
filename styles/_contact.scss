@@ -1,0 +1,240 @@
+.contacts {
+    margin-bottom: 69px;
+    &__title {
+        @include title-text;
+        margin-bottom: 22px;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 30px;
+    }
+    &__content-addres {
+        position: relative;
+        grid-column: 1/9;
+    }
+    &__maps {
+        max-width: 850px;
+        width: 100%;
+        height: 460px;
+    }
+    &__maps [class*="ground-pane"] {
+        filter: grayscale(1);
+    }
+    &__addres-descr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 50px 0 60px;
+        background-color: rgba(32, 32, 32, 0.85);
+        position: absolute;
+        top: 0;
+        height: 100%
+    }
+    &__addres-title {
+        @include subtitle-text;
+        color: $primary-color;
+        margin-top: 23px;
+        margin-bottom: 5px;
+    }
+    &__addres-text {
+        @include text-content;
+        color: $primary-color;
+        max-width: 300px;
+        line-height: 28px;
+        margin-bottom: 3px;
+    }
+    &__addres-tel {
+        display: flex;
+        align-items: center;
+        @include header-text;
+        color: $color-btn;
+    }
+    &__addres-tel:hover {
+        transition: color 0.5s ease;
+        color: $focus-color;
+    }
+    &__addres-tel:active {
+        color: $active-color;
+    }
+    &__content-form {
+        grid-column: 9/13;
+    }
+    &__form-title {
+        margin-top: -7px;
+        @include subtitle-text;
+        margin-bottom: 5px;
+    }
+    &__form-text {
+        @include text-content;
+        color: $span-color;
+        max-width: 480px;
+        margin-bottom: 14px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    &__form-input {
+        cursor: pointer;
+        height: 50px;
+        padding: 15px 23px;
+        width: 100%;
+        background-color: #E9E9E9;
+        outline: none;
+    }
+    &__form-input::placeholder {
+        @include text-content;
+        line-height: normal;
+        color: $span-color;
+    }
+    &__form-comment {
+        height: 150px;
+    }
+    &__form-input:focus {
+        border: 1px solid $hover-color;
+    }
+    &__form-input:hover::placeholder {
+        color: $hover-color;
+    }
+    &__form-btn {
+        @include font-btn;
+        align-self: start;
+    }
+    &__form-btn:hover {
+        transition: background-color 1s ease;
+        background-color: $focus-color;
+    }
+    &__form-btn:focus {
+        margin: -2.5px;
+        border: 3px solid $active-color;
+        outline: none;
+    }
+    &__form-btn:active {
+        background-color: $active-color;
+    }
+}
+
+@media (max-width:1024px) {
+    .contacts {
+        margin-bottom: 67px;
+        &__content {
+            grid-template-columns: repeat(8, 1fr);
+        }
+        &__content-addres {
+            grid-column: 1/6;
+        }
+        &__content-form {
+            grid-column: 6/9;
+        }
+        &__addres-descr {
+            padding: 0 50px 20px 32px;
+            width: 100%;
+            height: initial;
+            bottom: 0;
+            top: auto;
+        }
+        &__form-title {
+            margin-top: -9px;
+        }
+        &__addres-tel {
+            position: absolute;
+            bottom: 26px;
+            left: 179px;
+        }
+        &__form-text {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .contacts {
+        &__content {
+            grid-template-columns: repeat(6, 1fr);
+            gap: 32px;
+        }
+        &__content-addres {
+            grid-column: 1/7;
+        }
+        &__content-form {
+            grid-column: 1/5;
+        }
+        &__addres-descr {
+            padding: 0 50px 25px 30px;
+        }
+        &__addres-text {
+            max-width: 436px;
+        }
+        &__addres-tel {
+            position: unset;
+        }
+    }
+}
+
+@media (max-width:520px) {
+    .contacts {
+        margin-bottom: 50px;
+        &__container {
+            padding: 0;
+        }
+        &__content {
+            grid-template-columns: repeat(2, 1fr)
+        }
+        &__content-addres {
+            grid-column: 1/3;
+        }
+        &__addres-descr {
+            padding: 2px 30px 4px 19px;
+        }
+        &__content-form {
+            grid-column: 1/3;
+        }
+        &__title {
+            margin-left: 21px;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        &__addres-title {
+            font-size: 18px;
+            margin-top: 23px;
+            margin-bottom: 12px;
+        }
+        &__addres-text {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__addres-tel {
+            font-size: 14px;
+        }
+        &__content-form {
+            margin-left: 21px;
+            margin-right: 21px;
+        }
+        &__form-title {
+            margin-top: 0;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        &__form-text {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__form-input {
+            height: 40px;
+            padding: 12px 23px;
+        }
+        &__form-input::placeholder {
+            font-size: 14px;
+        }
+        &__form-comment {
+            height: 150px;
+        }
+        &__form-btn {
+            font-size: 14px;
+            padding: 11px 22px;
+        }
+    }
+}
